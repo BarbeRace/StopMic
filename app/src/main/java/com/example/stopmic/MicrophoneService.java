@@ -16,12 +16,13 @@ public class MicrophoneService extends Service {
     @Override
     public void onCreate() {
         super.onCreate();
+        Log.d(TAG, "On create coucou is called");
         audioManager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
     }
 
     @Override
     public int onStartCommand(Intent intent, int flags, int startId) {
-        Log.d(TAG, "Received start command");
+        Log.d(TAG, "Received start coucou command : unmuting mic ! ");
         if (intent != null && Objects.equals(intent.getAction(), Intent.ACTION_SCREEN_ON)) {
             // Activate the microphone
             audioManager.setMicrophoneMute(false);
@@ -31,14 +32,14 @@ public class MicrophoneService extends Service {
 
     @Override
     public IBinder onBind(Intent intent) {
-        Log.d(TAG, "Received bind request");
+        Log.d(TAG, "Coucou received coucou bind request");
         return null;
     }
 
     @Override
     public void onDestroy() {
         super.onDestroy();
-        Log.d(TAG, "MicrophoneService destroyed");
+        Log.d(TAG, "Received destroy : coucou supposed to be muting mic :P ");
         // Désactive le microphone
         audioManager.setMicrophoneMute(true);
     }
