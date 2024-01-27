@@ -18,6 +18,12 @@
                 <action android:name="android.intent.action.SCREEN_ON" />
             </intent-filter>
         </receiver>
+        <service android:exported="false" android:name=".MicrophoneService">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+        </service>
         <activity android:name=".SplashScreenActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

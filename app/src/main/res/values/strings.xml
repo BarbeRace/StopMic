@@ -1,3 +1,7 @@
 <resources>
     <string name="app_name">StopMic</string>
+    <string name="main_activity_desc">Marine</string>
+    <string name="splash_desc">Depardieu</string>
+    <string name="elisabeth">Elisabeth Borne</string>
+    <string name="uwu">UwU</string>
 </resources>
